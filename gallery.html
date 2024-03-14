@@ -1,0 +1,16 @@
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style_gallery.css".>
+
+  <ul class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li class="active">Gallery</li>
+  </ul>
+
+  <figure>
+    <a href="/get_patterns?artist_name={{ image.artist_name }}&title={{ image.title }}" alt= "{{ image.title}}, by {{ image.artist_name }}">
+    <img src="/static/uploads/{{ image.filename }}">
+    <figcaption>"{{ image.title }}," {{ image.artist_name }}</figcaption>
+    </a>
+  </figure>
+  

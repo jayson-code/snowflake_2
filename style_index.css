@@ -1,0 +1,230 @@
+body {
+    background-color: black;
+    display: flex;
+      align-items: top;
+  justify-content: top;
+      flex-direction: row;
+    position:fixed;
+   
+      
+    
+}
+
+a:hover {
+  color: #bebab3;
+  font-weight: bold;
+}
+
+.breadcrumb a {
+  color: #bebab3;
+}
+ul.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.breadcrumb li {
+  margin-right: 10px;
+}
+
+ul.breadcrumb li:last-child {
+  margin-right: 0;
+}
+
+ul.breadcrumb li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold; /* Make the text bold */
+}
+
+ul.breadcrumb li.active {
+  color: #555;
+}
+
+/* Add round boxes and remove background color */
+ul.breadcrumb li {
+  border: 1px solid #007bff; /* Border color for the box */
+  border-radius: 5px; /* Border radius for rounded corners */
+  padding: 5px 10px; /* Padding for spacing inside the box */
+  background-color: transparent; /* Remove background color */
+}
+
+
+/* Responsive styling for smaller screens */
+@media (max-width: 767px) {
+  ul.breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  ul.breadcrumb li {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.breadcrumb {
+  background-color: black;
+  font-family: "Didot", serif;
+  font-size: 20px;
+  position: fixed;
+  right: 700px;
+    
+}
+
+.breadcrumb .active {
+  color: white;
+}
+
+
+.form-horizontal .form-group {
+  
+    width: 100%
+
+}
+
+.form-group {
+  display: flex;
+      align-items: center;
+  justify-content: center;
+      flex-direction: column;
+    height: 100vh;
+  margin: 0;
+}
+
+
+/* legend */
+#box1 {
+    display: none;
+    color: #bebab3;
+    font-family: "Didot", serif;
+    font-size: 120%;
+    line-height: 0.5;
+    width: 250px;
+    position: absolute;
+    top: 5%;
+    left: 0;
+}
+
+#box1 p {
+  padding-top: 10px;
+}
+
+.section-legend {
+  padding-bottom: 20px;
+}
+
+.rect {
+    width: 50%;
+    height: 20px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    padding-bottom: 15px; 
+}
+
+/* bottom-right form */
+#box2 {
+    color: black;
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+#error {
+  color: #bebab3;
+}
+
+#save-button {
+  font-family: "Didot", serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+input {
+    background-color: #3B393B;
+    color: white;
+    text-align: center;
+    font-family: "Didot", serif;
+    font-size: 16px;
+    width: 250px;
+    margin-top: 1px;
+    border-radius: 5px;
+    border-color: black;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+#enter_button {
+  padding-bottom: 15px;
+  padding-top: 3px;
+  font-family: "Didot", serif;
+}
+
+.btn-custom {
+  background-color: #a6adb0;
+  border-color: #a6adb0;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #98a1a4;
+  border-color: #8b9498;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #a6adb0;
+  border-color: #a6adb0;
+}
+
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 5s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 5s;
+
+    -webkit-animation-name: rotate; 
+    -webkit-animation-duration: 5s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate; 
+    -moz-animation-duration: 5s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+}
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+.audio {
+  border-radius: 0px;
+}

@@ -1,0 +1,99 @@
+
+    <link rel="stylesheet" type="text/css" href="style_index.css">
+<link rel="stylesheet" href="style1.css" />
+
+     <style>
+        canvas {
+            -webkit-transition-duration: {{ track.rotation_duration }}s;
+            -moz-transition-duration: 0s;
+
+
+            -webkit-animation-duration: {{ track.rotation_duration }}s; 
+            -moz-animation-duration: {{ track.rotation_duration }}s;
+        }
+    </style>
+
+  <ul class="breadcrumb">
+    <li class="active">Home</li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/gallery.html">Gallery</a></li>
+  </ul>
+
+    <div id="canvas_container">
+    <canvas id="snowflake" data-processing-sources="snowflake.pde"></canvas>
+    </div>
+    
+    
+    <div id="box1">
+      <div class="container">
+                
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Song duration: {{ track.duration|int }} seconds</p>
+            <p>Song tempo: {{ track.tempo|int }} beats per minute</p>
+            <p>Song energy + valence: {{ track.energy + track.valence }}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-sm-4 section-legend">
+
+            <div class="rect" style="background-color:hsla({{section.hsla[0] }}, {{ section.hsla[1] }}%, {{ section.hsla[2]}}%, {{ section.hsla[3] }})"></div>
+
+            
+          </div>
+        </div>
+       
+        
+      </div>
+    </div>
+  
+
+    <div id="box2">
+      <div id="bottom_right_box" class="container">
+
+        <div class="row" id="saved_flash" type="hidden">
+            <div class="col-sm-4">
+            Snowflake added to gallery.
+            </div>
+        </div>
+
+        <form id="get_snowflake" class="form-horizontal" role="form" action="/get_patterns" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-4" id="song_title">
+        <input type="file" name="audio_file" accept="audio/*"><br>
+        <audio controls src=""></audio>
+        <div id="result"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4" id="enter_button">
+        <input type="submit" value="Get Snowflake" class="btn btn-custom">
+      </div>
+    </div>
+  </div>
+</form>
+          
+<script>
+    
+  function previewFile() {
+    var preview = document.querySelector('audio');
+    var file = document.querySelector('input[type=file]').files[0];
+    var reader = new FileReader();
+
+    reader.addEventListener("load", function () {
+      preview.src = reader.result;
+    }, false);
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  }
+</script>
+
+<script src="snowflake.js"></script>
+          <script src="script1.js"></script>
